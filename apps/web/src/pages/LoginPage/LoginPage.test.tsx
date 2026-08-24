@@ -22,12 +22,12 @@ describe("LoginPage page", () => {
     render(<LoginPage onLoginSubmit={handleLoginSubmit} />);
 
     await user.type(screen.getByLabelText("Email ou usuário"), "aline.dev");
-    await user.type(screen.getByLabelText("Senha"), "123456");
+    await user.type(screen.getByLabelText("Senha"), "test-mock-pass-123");
     await user.click(screen.getByRole("button", { name: /login/i }));
 
     expect(handleLoginSubmit).toHaveBeenCalledWith({
       identifier: "aline.dev",
-      password: "123456",
+      password: "test-mock-pass-123",
       rememberMe: false,
     });
   });

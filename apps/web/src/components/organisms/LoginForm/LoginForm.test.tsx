@@ -38,13 +38,13 @@ describe("LoginForm organism", () => {
     render(<LoginForm onSubmit={handleSubmit} />);
 
     await user.type(screen.getByLabelText("Email ou usuário"), "dev@codeconnect.com");
-    await user.type(screen.getByLabelText("Senha"), "segredo123");
+    await user.type(screen.getByLabelText("Senha"), "test-mock-pass-123");
     await user.click(screen.getByLabelText("Lembrar-me"));
     await user.click(screen.getByRole("button", { name: /login/i }));
 
     expect(handleSubmit).toHaveBeenCalledWith({
       identifier: "dev@codeconnect.com",
-      password: "segredo123",
+      password: "test-mock-pass-123",
       rememberMe: true,
     });
   });
