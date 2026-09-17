@@ -1,4 +1,4 @@
-# Code-Connect
+# code-connect
 
 Monorepo de uma rede social para desenvolvedores: API REST em **NestJS** e frontend em **React + Tailwind CSS**, com a UI construída em **Atomic Design** (atoms → molecules → organisms → templates → pages).
 
